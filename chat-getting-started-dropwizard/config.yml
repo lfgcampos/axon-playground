@@ -1,0 +1,21 @@
+logging:
+  level: INFO
+  loggers:
+    io.axoniq.labs: DEBUG
+
+# Database settings
+database:
+  driverClass: org.h2.Driver
+  user: sa
+  password: sa
+  url: jdbc:h2:./target/axon
+
+server:
+  gzip:
+    syncFlush: true # needed for SSE
+  applicationConnectors:
+    - type: http
+      port: 9090
+  adminConnectors:
+    - type: http
+      port: 9091
