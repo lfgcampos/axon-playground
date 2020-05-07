@@ -23,7 +23,7 @@ public class CommandController {
 
     private final CommandGateway commandGateway;
 
-    public CommandController(@SuppressWarnings("SpringJavaAutowiringInspection") CommandGateway commandGateway) {
+    public CommandController(CommandGateway commandGateway) {
         this.commandGateway = commandGateway;
     }
 
