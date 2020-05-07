@@ -6,13 +6,16 @@ plugins {
     kotlin("jvm") version "1.3.71"
     kotlin("plugin.spring") version "1.3.71"
 }
+
 springBoot {
-    mainClassName = "io.axoniq.labs.chat.ChatScalingOutApplication" // needed because Servers introduces additional main method
+    mainClassName = "io.axoniq.labs.chat.ChatGettingStartedApplication"
 }
+
 group = "io.axoniq.labs.chat"
 version = "0.0.1-SNAPSHOT"
 
 val axonVersion: String by extra { "4.3.3" }
+val swaggerVersion: String by extra {"2.9.2"}
 
 repositories {
     mavenCentral()
@@ -22,12 +25,13 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation ("io.projectreactor:reactor-core")
+    implementation("io.projectreactor:reactor-core")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.axonframework:axon-spring-boot-starter:$axonVersion")
-    implementation("io.springfox:springfox-swagger2:2.9.2")
+    implementation("io.springfox:springfox-swagger2:$swaggerVersion")
+    implementation("io.springfox:springfox-swagger-ui:$swaggerVersion")
     implementation("com.h2database:h2")
     testImplementation("org.axonframework:axon-test:$axonVersion")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
@@ -36,10 +40,12 @@ dependencies {
 apply {
     plugin("io.spring.dependency-management")
 }
+
 tasks.withType<JavaCompile> {
     sourceCompatibility = "11"
     targetCompatibility = "11"
 }
+
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict")

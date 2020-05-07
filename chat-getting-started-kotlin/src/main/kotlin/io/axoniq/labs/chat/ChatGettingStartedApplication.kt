@@ -1,7 +1,6 @@
 package io.axoniq.labs.chat
 
-import org.axonframework.eventsourcing.eventstore.EventStorageEngine
-import org.axonframework.eventsourcing.eventstore.inmemory.InMemoryEventStorageEngine
+import com.google.common.base.Predicates
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.context.annotation.Bean
@@ -15,25 +14,22 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2
 @SpringBootApplication
 class ChatGettingStartedApplication {
 
+    companion object {
+        @JvmStatic
+        fun main(args: Array<String>) {
+            runApplication<ChatGettingStartedApplication>(*args)
+        }
+    }
+
     @Configuration
     @EnableSwagger2
     class SwaggerConfig {
         @Bean
         fun api(): Docket = Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.any())
+                .apis(Predicates.not(RequestHandlerSelectors.basePackage("org.springframework")))
                 .paths(PathSelectors.any())
                 .build()
     }
 
-//    @Configuration
-//    class AxonConfig {
-//        @Bean
-//        fun storageEngine(): EventStorageEngine = InMemoryEventStorageEngine()
-//    }
-
-}
-
-fun main(args: Array<String>) {
-    runApplication<ChatGettingStartedApplication>(*args)
 }
