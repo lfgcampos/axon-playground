@@ -1,9 +1,14 @@
 HELP.md
 target/
+build/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
 !**/src/test/**
 .eslintcache
+
+### GRADLE ###
+.gradle
+!gradle/wrapper/gradle-wrapper.jar
 
 ### STS ###
 .apt_generated
