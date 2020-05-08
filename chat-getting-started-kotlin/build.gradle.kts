@@ -7,15 +7,11 @@ plugins {
     kotlin("plugin.spring") version "1.3.71"
 }
 
-springBoot {
-    mainClassName = "io.axoniq.labs.chat.ChatGettingStartedApplication"
-}
-
 group = "io.axoniq.labs.chat"
 version = "0.0.1-SNAPSHOT"
 
 val axonVersion: String by extra { "4.3.3" }
-val swaggerVersion: String by extra {"2.9.2"}
+val swaggerVersion: String by extra { "2.9.2" }
 
 repositories {
     mavenCentral()

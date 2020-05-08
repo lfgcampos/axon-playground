@@ -3,8 +3,8 @@
 How to start the ChatGettingStarted application
 ---
 
-1. Run `gradle build` to build your application
-1. Start application with `gradle bootRun`
+1. Run `./gradlew build` to build your application
+1. Start application with `./gradlew bootRun`
 1. To check that your application is running, check [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 
 <b>Note</b>: The Swagger UI does not support the 'Subscription Query' further on in the assignment,

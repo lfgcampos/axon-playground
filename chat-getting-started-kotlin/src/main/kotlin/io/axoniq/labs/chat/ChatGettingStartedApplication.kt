@@ -14,13 +14,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2
 @SpringBootApplication
 class ChatGettingStartedApplication {
 
-    companion object {
-        @JvmStatic
-        fun main(args: Array<String>) {
-            runApplication<ChatGettingStartedApplication>(*args)
-        }
-    }
-
     @Configuration
     @EnableSwagger2
     class SwaggerConfig {
@@ -32,4 +25,8 @@ class ChatGettingStartedApplication {
                 .build()
     }
 
+}
+
+fun main(args: Array<String>) {
+    runApplication<ChatGettingStartedApplication>(*args)
 }
