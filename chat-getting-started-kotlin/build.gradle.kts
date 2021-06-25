@@ -1,17 +1,17 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+val axonVersion: String by extra { "4.3.3" }
+val swaggerVersion: String by extra { "2.9.2" }
+
 plugins {
     id("org.springframework.boot") version "2.5.2"
     id("io.spring.dependency-management") version "1.0.9.RELEASE"
-    kotlin("jvm") version "1.3.71"
-    kotlin("plugin.spring") version "1.3.71"
+    kotlin("jvm") version "1.5.20"
+    kotlin("plugin.spring") version "1.5.20"
 }
 
 group = "io.axoniq.labs.chat"
 version = "0.0.1-SNAPSHOT"
-
-val axonVersion: String by extra { "4.3.3" }
-val swaggerVersion: String by extra { "2.9.2" }
 
 repositories {
     mavenCentral()
@@ -29,6 +29,7 @@ dependencies {
     implementation("io.springfox:springfox-swagger2:$swaggerVersion")
     implementation("io.springfox:springfox-swagger-ui:$swaggerVersion")
     implementation("com.h2database:h2")
+    implementation("javax.validation:validation-api")
     testImplementation("org.axonframework:axon-test:$axonVersion")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
