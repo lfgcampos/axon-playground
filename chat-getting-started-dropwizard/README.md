@@ -3,14 +3,14 @@
 How to start the ChatGettingStarted application
 ---
 
-1. Run `mvn clean install` to build your application
+1. Run `mvn clean verify` to build your application
 1. Run the liquibase migrate with `java -jar target/chat-getting-started-dropwizard-0.0.1-SNAPSHOT.jar db migrate config.yml`
 1. Start application with `java -jar target/chat-getting-started-dropwizard-0.0.1-SNAPSHOT.jar server config.yml`
 1. To check that your application is running, check [http://localhost:9090/swagger-ui.html](http://localhost:9090/swagger-ui.html)
 
 <b>Note</b>: The Swagger UI does not support the 'Subscription Query' further on in the assignment,
  as Swagger does not support streaming results. 
-Issuing a regular `curl` operation, or something along those lines, is recommended to check the Subscription Query.
+Issuing a regular `curl` operation, or something along those lines, is the recommended way to check the Subscription Query.
 
 <b>Note 2</b>: If you are on Intellij IDEA, you can also use the `command-request.http`
  and `query-request.http` files in this project to send requests directly from your IDE.
