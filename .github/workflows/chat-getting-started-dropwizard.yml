@@ -1,7 +1,10 @@
 name: Axon Playground - chat-getting-started-dropwizard
 
-on: [push, pull_request]
-  paths: chat-getting-started-dropwizard/**
+on: 
+  push:
+    paths: chat-getting-started-dropwizard/**
+  pull-request:
+    paths: chat-getting-started-dropwizard/**
 
 jobs:
   build:
