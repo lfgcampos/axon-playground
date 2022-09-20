@@ -19,7 +19,7 @@
         <dropwizard.version>2.1.2</dropwizard.version>
         <mainClass>io.axoniq.labs.chat.ChatGettingStartedApplication</mainClass>
         <axon.version>4.5.15</axon.version>
-        <projectreactor.version>3.4.22</projectreactor.version>
+        <projectreactor.version>3.4.23</projectreactor.version>
         <junit.jupiter.version>5.9.0</junit.jupiter.version>
         <hamcrest.version>2.2</hamcrest.version>
 
