@@ -18,7 +18,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <dropwizard.version>2.1.5</dropwizard.version>
         <mainClass>io.axoniq.labs.chat.ChatGettingStartedApplication</mainClass>
-        <axon.version>4.8.2</axon.version>
+        <axon.version>4.9.0</axon.version>
         <projectreactor.version>3.5.11</projectreactor.version>
         <junit.jupiter.version>5.10.0</junit.jupiter.version>
         <hamcrest.version>2.2</hamcrest.version>
