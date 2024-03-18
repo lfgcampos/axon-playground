@@ -6,7 +6,7 @@ val swaggerVersion: String by extra { "2.9.2" }
 plugins {
     id("org.springframework.boot") version "2.7.5"
     id("io.spring.dependency-management") version "1.1.4"
-    kotlin("jvm") version "1.9.22"
+    kotlin("jvm") version "1.9.23"
     kotlin("plugin.spring") version "1.9.22"
 }
 
