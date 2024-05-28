@@ -7,7 +7,7 @@ plugins {
     id("org.springframework.boot") version "2.7.5"
     id("io.spring.dependency-management") version "1.1.5"
     kotlin("jvm") version "2.0.0"
-    kotlin("plugin.spring") version "1.9.24"
+    kotlin("plugin.spring") version "2.0.0"
 }
 
 group = "io.axoniq.labs.chat"
