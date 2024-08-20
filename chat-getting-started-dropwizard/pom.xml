@@ -20,7 +20,7 @@
         <mainClass>io.axoniq.labs.chat.ChatGettingStartedApplication</mainClass>
         <axon.version>4.10.0</axon.version>
         <projectreactor.version>3.6.9</projectreactor.version>
-        <junit.jupiter.version>5.10.3</junit.jupiter.version>
+        <junit.jupiter.version>5.11.0</junit.jupiter.version>
         <hamcrest.version>3.0</hamcrest.version>
 
         <!-- plugins -->
