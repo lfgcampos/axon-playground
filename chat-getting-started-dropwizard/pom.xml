@@ -16,7 +16,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <dropwizard.version>2.1.5</dropwizard.version>
+        <dropwizard.version>4.0.10</dropwizard.version>
         <mainClass>io.axoniq.labs.chat.ChatGettingStartedApplication</mainClass>
         <axon.version>4.10.1</axon.version>
         <projectreactor.version>3.6.10</projectreactor.version>
